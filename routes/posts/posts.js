@@ -35,7 +35,6 @@ router.post('/add' , (req , res)=>{
 
 router.get('/delete/:postId' ,async (req,res)=>{
     try{
-        // try with remove afterwards if you faced error
         var deleted =await City.deleteOne({_id : ObjectID(req.params.postId)});
         res.status(200).send('object with _id' + req.params.postId + 'deleted');
     }catch(err){
