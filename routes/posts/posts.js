@@ -25,7 +25,6 @@ router.post('/add' , (req , res)=>{
         sea_conditions:req.body.sea_conditions,
         city:req.body.city
     });
-
     city.save().then(data=>{
         res.status(200).json(data);
     }).catch(err=>{
